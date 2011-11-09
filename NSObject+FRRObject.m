@@ -17,4 +17,10 @@
     dispatch_after(popTime, dispatch_get_main_queue(), block);
 }
 
+-(void) performBlock:(void (^)(void))block ifRespondsTo:(SEL) aSelector{
+    if ([self respondsToSelector:aSelector]) {
+        block();
+    }
+}
+
 @end

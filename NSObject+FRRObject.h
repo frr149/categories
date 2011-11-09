@@ -12,5 +12,6 @@
 @interface NSObject (NSObject_FRRObject)
 
 -(void)performBlock:(void (^)(void))block afterDelay: (NSTimeInterval) delayInSeconds; 
+-(void)performBlock:(void (^)(void))block ifRespondsTo:(SEL) aSelector;
 
 @end
